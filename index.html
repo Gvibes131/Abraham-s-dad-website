@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresh Movement Ti De!</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* GLOBAL IMAGE */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* HEADER */
+header {
+  background: #1a9950;
+  color: white;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header img {
+  height: 60px;
+  background: white;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #FFD23F;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(26,153,80,0.85), rgba(26,153,80,0.85)),
+  url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d') center/cover;
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 10px auto;
+  font-size: 1.2rem;
+}
+
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  background: #E63946;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #c92d3a;
+}
+
+/* SECTION */
+section {
+  padding: 60px 5%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  color: #1a9950;
+  margin-bottom: 20px;
+}
+
+/* ABOUT */
+.about p {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about img {
+  display: block;
+  margin: 25px auto;
+  max-width: 180px;
+  border-radius: 10px;
+}
+
+/* SPEECH */
+.speech {
+  background: white;
+  padding: 25px;
+  margin-top: 30px;
+  border-left: 6px solid #1a9950;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.speech p {
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+/* LIST */
+.speech ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+/* SIGNATURE */
+.signature {
+  margin-top: 25px;
+  text-align: right;
+}
+
+.signature img {
+  height: 60px;
+  display: block;
+  margin-left: auto;
+}
+
+.signature p {
+  margin: 4px 0;
+  font-style: italic;
+}
+
+.signature .name {
+  font-weight: bold;
+  color: #1a9950;
+}
+
+/* SERVICES */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border-top: 5px solid #1a9950;
+}
+
+.card:nth-child(2) { border-top-color: #E63946; }
+.card:nth-child(3) { border-top-color: #277DA1; }
+
+/* FORM */
+.form-box {
+  max-width: 500px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.form-box input,
+.form-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.form-box button {
+  width: 100%;
+  padding: 12px;
+  background: #1a9950;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  background: #147a3f;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 25px;
+}
+
+footer img {
+  height: 40px;
+  background: white;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 10px;
+    display: inline-block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .signature {
+    text-align: center;
+  }
+
+  .signature img {
+    margin: auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="WhatsApp Image 2026-04-21 at 3.16.25 PM.jpeg">
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Fresh Movement Ti De!</h1>
+  <p>Uniting people. Igniting action. Building a fresh future together.</p>
+  <a href="#contact" class="btn">Join The Movement</a>
+</div>
+
+<section id="about" class="about">
+  <h2>Who We Are</h2>
+  
+
+  <p>
+    Fresh Movement Ti De is a people-powered initiative driving positive change through unity and empowerment.
+  </p>
+
+  <img src="IMG-20260421-WA0018.jpg" alt="Logo">
+
+  <div class="speech">
+  <h3>The President Speech</h3>
+
+  <p>
+<strong> Charge to Build Togethers</strong>
+
+<br>My fellow members of Fresh Movement Ti De, thank you. When we started, we were an idea. Today, we are a movement. Tomorrow, we will be the standard others measure themselves against.</br>
+
+We face a test right now. The world is fast. Distraction is loud. If we drift, we disappear. 
+<br>If we focus, we lead. I’m asking you to choose focus. To choose each other.</br>
+
+Fresh Movement Ti De stands on three things:  
+<br><ul>Excellence: Do the hard work well, even when no one is watching.  </ul>
+<ul>Integrity: Tell the truth, especially when it costs us.  </ul>
+<ul>Service: Measure success by the people we lift.</ul></br>
+
+Any decision that honors all three gets a yes. If it breaks one, it’s a no. That’s how we stay trusted.
+
+ 
+<ul>1. Own our craft. Be the person who knows how it works. Mastery is our defense. </ul> 
+<ul>2. Build what lasts. Chase value, not applause. Ship things that matter next year.</ul>  
+<ul>3. Raise leaders. Your job is to train someone who can replace you.</ul>
+
+<br>As your president, I’ll be clear and accountable. I’ll cut what doesn’t serve us. I’ll fight for what you need and take responsibility when we miss.</br>
+
+Now I ask you: show up prepared. Disagree with data, not ego. Protect our culture by stopping small compromises early.
+
+<br>History remembers the groups that refused to be average. That is Fresh Movement Ti De if we choose it today.</br>
+
+<strong>Let’s choose it. Let’s get to work.</strong>
+
+<br>Thank you. I’m honored .</br>
+  </p>
+
+  <!-- SIGNATURE -->
+  <div class="signature">
+    <p>Signed,</p>
+
+    <!-- OPTION 1: IMAGE SIGNATURE -->
+    <img src="Signature.jpeg" alt="Signature">
+
+    <!-- OPTION 2 (if no image, use this instead and delete img above) -->
+    <!-- <p class="hand">✍️ President, Fresh Movement Ti De</p> -->
+
+    <p class="name">President, Fresh Movement Ti De!</p>
+  </div>
+</div>
+</section>
+
+<section id="services">
+  <h2>What We Do</h2>
+
+  <div class="services">
+    <div class="card">
+      <h3>Community Action</h3>
+      <p>Mobilizing locals through outreaches, clean-ups, and support programs that create real impact.</p>
+    </div>
+
+    <div class="card">
+      <h3>Youth Empowerment</h3>
+      <p>Equipping young people with skills, mentorship, and platforms to lead and thrive.</p>
+    </div>
+
+    <div class="card">
+      <h3>Civic Engagement</h3>
+      <p>Educating and activating citizens to participate and make their voices heard on key issues.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Register</h2>
+
+  <!-- ⚠️ KEEP YOUR FORMSPREE LINK -->
+  <form id="form" action="https://formspree.io/f/xvzdwjyv" method="POST" class="form-box">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <input type="text" name="state" placeholder="Your State">
+    <input type="text" name="lga" placeholder="Your LGA">
+
+    <!-- IMAGE -->
+    <input type="file" id="fileInput" accept="image/*" required>
+
+    <img id="preview" style="display:none; margin-top:10px;">
+
+    <!-- 🔥 IMPORTANT (DO NOT REMOVE) -->
+    <input type="hidden" name="image_url" id="imageUrl">
+
+    <textarea name="message" placeholder="Your Message"></textarea>
+
+    <button type="submit">Submit</button>
+
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2026 Fresh Movement Ti De</p>
+</footer>
+
+<!-- 🔥 FIREBASE SCRIPT -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getStorage, ref, uploadBytes, getDownloadURL } 
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
+
+/* ⚠️ REPLACE THIS */
+const firebaseConfig = {
+  apiKey: "PUT_YOUR_API_KEY_HERE",
+  authDomain: "PUT_YOUR_PROJECT.firebaseapp.com",
+  projectId: "PUT_YOUR_PROJECT_ID",
+  storageBucket: "PUT_YOUR_PROJECT.appspot.com",
+};
+
+const app = initializeApp(firebaseConfig);
+const storage = getStorage(app);
+
+const fileInput = document.getElementById("fileInput");
+const preview = document.getElementById("preview");
+const form = document.getElementById("form");
+
+/* PREVIEW */
+fileInput.addEventListener("change", () => {
+  const file = fileInput.files[0];
+  if (file) {
+    preview.src = URL.createObjectURL(file);
+    preview.style.display = "block";
+  }
+});
+
+/* SUBMIT */
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const file = fileInput.files[0];
+
+  const storageRef = ref(storage, "uploads/" + file.name);
+
+  await uploadBytes(storageRef, file);
+
+  const url = await getDownloadURL(storageRef);
+
+  document.getElementById("imageUrl").value = url;
+
+  form.submit();
+});
+</script>
+
+</body>
+</html>
