@@ -5,12 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fresh Movement Ti De!</title>
 
+<!-- ✅ TAB LOGO (FAVICON) -->
+<link rel="icon" type="image/png" href="IMG-20260421-WA0018.jpg">
+
 <style>
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -37,7 +44,9 @@ header {
 }
 
 header img {
-  height: 60px;
+  height: 50px;
+  width: auto;
+  object-fit: contain;
   background: white;
   padding: 5px;
   border-radius: 8px;
@@ -130,7 +139,6 @@ h2 {
   margin-top: 10px;
 }
 
-/* LIST */
 .speech ul {
   margin: 15px 0;
   padding-left: 20px;
@@ -218,13 +226,6 @@ footer {
   padding: 25px;
 }
 
-footer img {
-  height: 40px;
-  background: white;
-  padding: 4px;
-  border-radius: 6px;
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
   header {
@@ -259,7 +260,7 @@ footer img {
 <body>
 
 <header>
-  <img src="WhatsApp Image 2026-04-21 at 3.16.25 PM.jpeg">
+  <img src="WhatsApp Image 2026-04-21 at 3.16.25 PM.jpeg" alt="Fresh Movement Logo">
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -275,61 +276,42 @@ footer img {
 
 <section id="about" class="about">
   <h2>Who We Are</h2>
-  
 
   <p>
     Fresh Movement Ti De is a people-powered initiative driving positive change through unity and empowerment.
   </p>
 
-  <img src="IMG-20260421-WA0018.jpg" alt="Logo">
+  <img src="IMG-20260421-WA0018.jpg" alt="Movement Logo">
 
   <div class="speech">
-  <h3>The President Speech</h3>
+    <h3>The President Speech</h3>
 
-  <p>
-<strong> Charge to Build Togethers</strong>
+    <p><strong>Charge to Build Together</strong></p>
 
-<br>My fellow members of Fresh Movement Ti De, thank you. When we started, we were an idea. Today, we are a movement. Tomorrow, we will be the standard others measure themselves against.</br>
+    <p>
+      My fellow members of Fresh Movement Ti De, thank you. When we started, we were an idea.
+      Today, we are a movement. Tomorrow, we will be the standard others measure themselves against.
+    </p>
 
-We face a test right now. The world is fast. Distraction is loud. If we drift, we disappear. 
-<br>If we focus, we lead. I’m asking you to choose focus. To choose each other.</br>
+    <p>
+      We face a test right now. The world is fast. Distraction is loud.
+      If we drift, we disappear. If we focus, we lead.
+    </p>
 
-Fresh Movement Ti De stands on three things:  
-<br><ul>Excellence: Do the hard work well, even when no one is watching.  </ul>
-<ul>Integrity: Tell the truth, especially when it costs us.  </ul>
-<ul>Service: Measure success by the people we lift.</ul></br>
+    <ul>
+      <li><strong>Excellence:</strong> Do the hard work well, even when no one is watching.</li>
+      <li><strong>Integrity:</strong> Tell the truth, especially when it costs us.</li>
+      <li><strong>Service:</strong> Measure success by the people we lift.</li>
+    </ul>
 
-Any decision that honors all three gets a yes. If it breaks one, it’s a no. That’s how we stay trusted.
+    <p><strong>Let’s choose it. Let’s get to work.</strong></p>
 
- 
-<ul>1. Own our craft. Be the person who knows how it works. Mastery is our defense. </ul> 
-<ul>2. Build what lasts. Chase value, not applause. Ship things that matter next year.</ul>  
-<ul>3. Raise leaders. Your job is to train someone who can replace you.</ul>
-
-<br>As your president, I’ll be clear and accountable. I’ll cut what doesn’t serve us. I’ll fight for what you need and take responsibility when we miss.</br>
-
-Now I ask you: show up prepared. Disagree with data, not ego. Protect our culture by stopping small compromises early.
-
-<br>History remembers the groups that refused to be average. That is Fresh Movement Ti De if we choose it today.</br>
-
-<strong>Let’s choose it. Let’s get to work.</strong>
-
-<br>Thank you. I’m honored .</br>
-  </p>
-
-  <!-- SIGNATURE -->
-  <div class="signature">
-    <p>Signed,</p>
-
-    <!-- OPTION 1: IMAGE SIGNATURE -->
-    <img src="Signature.jpeg" alt="Signature">
-
-    <!-- OPTION 2 (if no image, use this instead and delete img above) -->
-    <!-- <p class="hand">✍️ President, Fresh Movement Ti De</p> -->
-
-    <p class="name">President, Fresh Movement Ti De!</p>
+    <div class="signature">
+      <p>Signed,</p>
+      <img src="Signature.jpeg" alt="President Signature">
+      <p class="name">President, Fresh Movement Ti De!</p>
+    </div>
   </div>
-</div>
 </section>
 
 <section id="services">
@@ -338,17 +320,17 @@ Now I ask you: show up prepared. Disagree with data, not ego. Protect our cultur
   <div class="services">
     <div class="card">
       <h3>Community Action</h3>
-      <p>Mobilizing locals through outreaches, clean-ups, and support programs that create real impact.</p>
+      <p>Mobilizing locals through outreach and programs that create real impact.</p>
     </div>
 
     <div class="card">
       <h3>Youth Empowerment</h3>
-      <p>Equipping young people with skills, mentorship, and platforms to lead and thrive.</p>
+      <p>Equipping young people with skills and mentorship to lead.</p>
     </div>
 
     <div class="card">
       <h3>Civic Engagement</h3>
-      <p>Educating and activating citizens to participate and make their voices heard on key issues.</p>
+      <p>Encouraging citizens to participate and make their voices heard.</p>
     </div>
   </div>
 </section>
@@ -356,28 +338,24 @@ Now I ask you: show up prepared. Disagree with data, not ego. Protect our cultur
 <section id="contact">
   <h2>Register</h2>
 
-  <!-- ⚠️ KEEP YOUR FORMSPREE LINK -->
   <form id="form" action="https://formspree.io/f/xvzdwjyv" method="POST" class="form-box">
-
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="tel" name="phone" placeholder="Phone Number" required>
     <input type="email" name="email" placeholder="Your Email" required>
 
     <input type="text" name="state" placeholder="Your State">
     <input type="text" name="lga" placeholder="Your LGA">
+<!-- IMAGE INPUT -->
+<input type="file" id="fileInput" accept="image/*" required>
 
-    <!-- IMAGE -->
-    <input type="file" id="fileInput" accept="image/*" required>
+<!-- IMAGE PREVIEW -->
+<img id="preview" style="display:none; margin-top:10px; max-height:200px; border-radius:10px;">
 
-    <img id="preview" style="display:none; margin-top:10px;">
-
-    <!-- 🔥 IMPORTANT (DO NOT REMOVE) -->
-    <input type="hidden" name="image_url" id="imageUrl">
-
+<!-- HIDDEN FIELD (IMPORTANT) -->
+<input type="hidden" name="image_url" id="imageUrl">
     <textarea name="message" placeholder="Your Message"></textarea>
 
     <button type="submit">Submit</button>
-
   </form>
 </section>
 
@@ -385,18 +363,17 @@ Now I ask you: show up prepared. Disagree with data, not ego. Protect our cultur
   <p>&copy; 2026 Fresh Movement Ti De</p>
 </footer>
 
-<!-- 🔥 FIREBASE SCRIPT -->
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getStorage, ref, uploadBytes, getDownloadURL } 
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
 
-/* ⚠️ REPLACE THIS */
+/* ⚠️ REPLACE THIS WITH YOUR FIREBASE CONFIG */
 const firebaseConfig = {
   apiKey: "PUT_YOUR_API_KEY_HERE",
-  authDomain: "PUT_YOUR_PROJECT.firebaseapp.com",
-  projectId: "PUT_YOUR_PROJECT_ID",
-  storageBucket: "PUT_YOUR_PROJECT.appspot.com",
+  authDomain: "your-project.firebaseapp.com",
+  projectId: "your-project-id",
+  storageBucket: "your-project.appspot.com",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -420,16 +397,26 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const file = fileInput.files[0];
+  if (!file) {
+    alert("Please select an image");
+    return;
+  }
 
-  const storageRef = ref(storage, "uploads/" + file.name);
+  try {
+    const storageRef = ref(storage, "uploads/" + Date.now() + "_" + file.name);
 
-  await uploadBytes(storageRef, file);
+    await uploadBytes(storageRef, file);
 
-  const url = await getDownloadURL(storageRef);
+    const url = await getDownloadURL(storageRef);
 
-  document.getElementById("imageUrl").value = url;
+    document.getElementById("imageUrl").value = url;
 
-  form.submit();
+    form.submit();
+
+  } catch (err) {
+    alert("Upload failed. Check Firebase setup.");
+    console.error(err);
+  }
 });
 </script>
 
