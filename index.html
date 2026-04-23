@@ -6,7 +6,7 @@
 <title>Fresh Movement Ti De!</title>
 
 <!-- ✅ TAB LOGO (FAVICON) -->
-<link rel="icon" type="image/png" href="IMG-20260421-WA0018.jpg">
+<link rel="icon" type="image/png" href="WhatsApp Image 2026-04-21 at 3.16.25 PM.jpeg">
 
 <style>
 * {
@@ -289,20 +289,32 @@ footer {
     <p><strong>Charge to Build Together</strong></p>
 
     <p>
-      My fellow members of Fresh Movement Ti De, thank you. When we started, we were an idea.
-      Today, we are a movement. Tomorrow, we will be the standard others measure themselves against.
-    </p>
+My fellow members of Fresh Movement Ti De, thank you. When we started, we were an idea. Today, we are a movement. Tomorrow, we will be the standard others measure themselves against.
 
-    <p>
-      We face a test right now. The world is fast. Distraction is loud.
-      If we drift, we disappear. If we focus, we lead.
-    </p>
+We face a test right now. The world is fast. Distraction is loud. If we drift, we disappear. If we focus, we lead. I’m asking you to choose focus. To choose each other.
 
-    <ul>
+Fresh Movement Ti De stands on three things:  
+ <ul>
       <li><strong>Excellence:</strong> Do the hard work well, even when no one is watching.</li>
       <li><strong>Integrity:</strong> Tell the truth, especially when it costs us.</li>
       <li><strong>Service:</strong> Measure success by the people we lift.</li>
     </ul>
+Any decision that honors all three gets a yes. If it breaks one, it’s a no. That’s how we stay trusted.
+
+So here’s our charge:  
+<ul>
+<li>1. Own our craft. Be the person who knows how it works. Mastery is our defense.</li>
+<li>2. Build what lasts. Chase value, not applause. Ship things that matter next year.</li>
+<li>3. Raise leaders. Your job is to train someone who can replace you.</li>
+</ul>
+As your president, I’ll be clear and accountable. I’ll cut what doesn’t serve us. I’ll fight for what you need and take responsibility when we miss.
+
+Now I ask you: show up prepared. Disagree with data, not ego. Protect our culture by stopping small compromises early.
+
+History remembers the groups that refused to be average. That is Fresh Movement Ti De if we choose it today.  
+ </p>
+
+
 
     <p><strong>Let’s choose it. Let’s get to work.</strong></p>
 
@@ -336,89 +348,67 @@ footer {
 </section>
 
 <section id="contact">
+
+<form action="https://formspree.io/f/mbdqzozd" method="POST" class="form-box">
+
   <h2>Register</h2>
 
-  <form id="form" action="https://formspree.io/f/xvzdwjyv" method="POST" class="form-box">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-    <input type="email" name="email" placeholder="Your Email" required>
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="tel" name="phone" placeholder="Phone Number" required>
+  <input type="email" name="email" placeholder="Your Email" required>
 
-    <input type="text" name="state" placeholder="Your State">
-    <input type="text" name="lga" placeholder="Your LGA">
-<!-- IMAGE INPUT -->
-<input type="file" id="fileInput" accept="image/*" required>
+  <input type="text" name="state" placeholder="State">
+  <input type="text" name="lga" placeholder="LGA">
 
-<!-- IMAGE PREVIEW -->
-<img id="preview" style="display:none; margin-top:10px; max-height:200px; border-radius:10px;">
+  <!-- UPLOAD BUTTON -->
+  <button type="button" class="upload-btn" id="upload_widget">
+    Upload Image
+  </button>
 
-<!-- HIDDEN FIELD (IMPORTANT) -->
-<input type="hidden" name="image_url" id="imageUrl">
-    <textarea name="message" placeholder="Your Message"></textarea>
+  <!-- IMAGE URL -->
+  <input type="hidden" name="image_url" id="imageUrl">
 
-    <button type="submit">Submit</button>
-  </form>
+  <!-- PREVIEW -->
+  <img id="preview">
+
+  <textarea name="message" placeholder="Message"></textarea>
+
+  <button type="submit">Submit</button>
+
+</form>
+
 </section>
 
 <footer>
   <p>&copy; 2026 Fresh Movement Ti De</p>
 </footer>
 
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getStorage, ref, uploadBytes, getDownloadURL } 
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
+<!-- CLOUDINARY SCRIPT -->
+<script src="https://upload-widget.cloudinary.com/global/all.js"></script>
 
-/* ⚠️ REPLACE THIS WITH YOUR FIREBASE CONFIG */
-const firebaseConfig = {
-  apiKey: "PUT_YOUR_API_KEY_HERE",
-  authDomain: "your-project.firebaseapp.com",
-  projectId: "your-project-id",
-  storageBucket: "your-project.appspot.com",
-};
+<script>
+var myWidget = cloudinary.createUploadWidget({
+  cloudName: "dbvffxmqb",   // 🔴 FIXED
+  uploadPreset: "Abraham"   // 🔴 OK
+}, (error, result) => {
 
-const app = initializeApp(firebaseConfig);
-const storage = getStorage(app);
+  if (!error && result && result.event === "success") {
 
-const fileInput = document.getElementById("fileInput");
-const preview = document.getElementById("preview");
-const form = document.getElementById("form");
+    const url = result.info.secure_url;
 
-/* PREVIEW */
-fileInput.addEventListener("change", () => {
-  const file = fileInput.files[0];
-  if (file) {
-    preview.src = URL.createObjectURL(file);
+    document.getElementById("imageUrl").value = url;
+
+    const preview = document.getElementById("preview");
+    preview.src = url;
     preview.style.display = "block";
   }
 });
 
-/* SUBMIT */
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const file = fileInput.files[0];
-  if (!file) {
-    alert("Please select an image");
-    return;
-  }
-
-  try {
-    const storageRef = ref(storage, "uploads/" + Date.now() + "_" + file.name);
-
-    await uploadBytes(storageRef, file);
-
-    const url = await getDownloadURL(storageRef);
-
-    document.getElementById("imageUrl").value = url;
-
-    form.submit();
-
-  } catch (err) {
-    alert("Upload failed. Check Firebase setup.");
-    console.error(err);
-  }
+document.getElementById("upload_widget").addEventListener("click", function(){
+  myWidget.open();
 });
 </script>
-
 </body>
+
+
 </html>
